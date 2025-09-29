@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOM_JOKES</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RANDOM_JOKES</h1>
+            <p class="subtitle">Los chistes más épicos del universo</p>
+        </header>
+        
+        <main>
+            <div id="joke-container" class="joke-container">
+                <div class="joke-placeholder">
+                    <p>¡Presiona el botón para escuchar la sabiduría de Chuck Norris!</p>
+                    <div class="chuck-emoji">🤠</div>
+                </div>
+            </div>
+            
+            <div class="button-container">
+                <button id="new-joke-btn" class="joke-button">
+                    <span class="button-text">¡Dame un chiste épico!</span>
+                    <div class="loading-spinner" id="loading-spinner"></div>
+                </button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Powered by Random Jokes API</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
